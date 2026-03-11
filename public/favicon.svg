@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <!-- Minimalist Geometric Paper Fold Mark -->
+  <rect width="32" height="32" rx="7" fill="#111827" />
+  <!-- Document base sheet -->
+  <path d="M9 7.5C9 6.67157 9.67157 6 10.5 6H19L23 10V24.5C23 25.3284 22.3284 26 21.5 26H10.5C9.67157 26 9 25.3284 9 24.5V7.5Z" fill="#F7F7F5" />
+  <!-- Fold corner accent -->
+  <path d="M19 6V10H23L19 6Z" fill="#3157D5" />
+  <!-- Technical editorial document lines -->
+  <rect x="12" y="13.5" width="8" height="1.6" rx="0.8" fill="#111827" />
+  <rect x="12" y="17" width="8" height="1.6" rx="0.8" fill="#4B5563" />
+  <rect x="12" y="20.5" width="5.5" height="1.6" rx="0.8" fill="#3157D5" />
+</svg>

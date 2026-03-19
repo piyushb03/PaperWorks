@@ -118,3 +118,123 @@ export const servicesData: ServiceItem[] = [
     sampleVisualType: 'research',
   },
 
+  {
+    slug: 'ieee-formatting',
+    route: '/ieee-formatting',
+    title: 'IEEE Formatting Support & Standards Compliance',
+    shortTitle: 'IEEE Formatting Support',
+    category: 'research',
+    categoryLabel: 'Research & Papers',
+    tagline: 'Pixel-perfect adherence to IEEE two-column specifications, typography, and citation conventions.',
+    shortDescription: 'Rigorous formatting for IEEE conference and transactions manuscripts, including margins, equations, vector figures, and numbered references.',
+    description: 'IEEE publications demand strict adherence to two-column geometry, font point hierarchies, column balancing on final pages, specific caption alignments, and bracketed numeric citation formatting. PaperWorks ensures your document precisely aligns with IEEE Author Guidelines without formatting discrepancies.',
+    audience: [
+      'Authors preparing papers for IEEE conferences or transactions',
+      'Engineers converting institutional reports into standard IEEE two-column format',
+      'Postgraduate scholars requiring compliance with IEEE conference submission portals (e.g. IEEE PDF eXpress)',
+    ],
+    scopePoints: [
+      'Two-column geometry setup (8.5" x 11" US Letter / A4 standard, margins, gutters, column widths)',
+      'IEEE heading hierarchy (Roman numeral majors, uppercase letters, italicized subheadings)',
+      'Equation formatting with right-aligned numbering and standard mathematical notation',
+      'Figure and table formatting (top/bottom column placement, caption numbering, high-DPI scaling)',
+      'IEEE reference style compliance [1], [2] with complete volume, issue, page, and DOI records',
+      'Final page column height balancing',
+    ],
+    deliverables: [
+      'Formatted manuscript in Microsoft Word (.docx) or LaTeX source files conforming to IEEE styles',
+      'High-resolution PDF ready for compliance check (compatible with IEEE PDF eXpress workflows)',
+      'Pre-flight formatting audit report detailing verified checks',
+    ],
+    processSteps: [
+      { title: 'Document Submission', desc: 'Provide your unformatted or draft manuscript, graphics, and specific IEEE conference track info.' },
+      { title: 'Grid & Geometry Configuration', desc: 'We set up exact column measurements, fonts (Times New Roman / Computer Modern), and line heights.' },
+      { title: 'Figures, Tables & References', desc: 'All figures, mathematical equations, and numeric citations are meticulously aligned to IEEE rules.' },
+      { title: 'Compliance Verification', desc: 'Final review ensuring column balancing, margin integrity, and clean export.' },
+    ],
+    faqs: [
+      {
+        question: 'Are you officially affiliated with IEEE?',
+        answer: 'No. PaperWorks is an independent professional document support service. We assist authors with conforming to publicly documented IEEE publication specifications and guidelines.'
+      },
+      {
+        question: 'Can you fix IEEE PDF eXpress font embedding errors?',
+        answer: 'Yes. A frequent hurdle with IEEE submissions is font embedding or non-standard color spaces. We ensure all fonts (Type 1 / TrueType) are fully embedded and PDF compliance standards are met.'
+      },
+      {
+        question: 'What formats do you deliver?',
+        answer: 'We deliver formatted Microsoft Word templates (.docx) or Overleaf-ready LaTeX archives (.tex, .bib, figures) based on your target preference.'
+      }
+    ],
+    relatedServices: ['research-paper', 'paper-editing', 'literature-review'],
+    relatedResources: ['ieee-format-guide', 'how-to-write-research-paper'],
+    seoTitle: 'IEEE Formatting Support & Two-Column Guidelines Compliance | PaperWorks',
+    seoDescription: 'Precise IEEE manuscript formatting support. Column geometry, equation numbering, figure captions, and IEEE reference style compliance.',
+    keywords: ['ieee formatting support', 'ieee paper format', 'two column ieee style', 'ieee reference format'],
+    sampleVisualType: 'ieee',
+  },
+
+  {
+    slug: 'literature-review',
+    route: '/literature-review',
+    title: 'Literature Review Support & Scholarly Synthesis',
+    shortTitle: 'Literature Review Support',
+    category: 'research',
+    categoryLabel: 'Research & Papers',
+    tagline: 'Transform scattered research publications into a coherent, logically linked thematic narrative.',
+    shortDescription: 'Methodical organization of related works, identification of research gaps, thematic clustering, and citation lineage mapping.',
+    description: 'A robust literature review does not merely summarize papers one by one; it weaves them together into thematic clusters that demonstrate the evolution of thought, uncover limitations in existing paradigms, and justify your research problem.',
+    audience: [
+      'Master’s and PhD scholars writing dissertation literature chapters',
+      'Authors preparing Section II (Related Work) for technical papers',
+      'Researchers needing systematic synthesis of contradictory findings in recent literature',
+    ],
+    scopePoints: [
+      'Thematic clustering rather than mechanical chronological listing',
+      'Critical analysis of methodological limitations in baseline works',
+      'Clarity in establishing why previous approaches fall short for the target problem',
+      'Comprehensive reference hygiene and citation context',
+    ],
+    deliverables: [
+      'Structured literature review chapter or related-work section (.docx / .tex)',
+      'Synthesis matrix mapping authors, approaches, datasets, and limitations',
+      'Annotated citation list formatted according to your target journal/style',
+    ],
+    processSteps: [
+      { title: 'Core Papers Gathering', desc: 'Share your target topic, bibliography list, or key benchmark papers.' },
+      { title: 'Thematic Blueprint', desc: 'We outline cohesive themes and categories rather than isolated summaries.' },
+      { title: 'Critical Synthesis Drafting', desc: 'We refine the text to emphasize methodological evolution and critical gaps.' },
+      { title: 'Final Polish', desc: 'Reviewing narrative flow, transitions, and accurate reference mapping.' },
+    ],
+    faqs: [
+      {
+        question: 'How do you avoid the "annotated bibliography" trap?',
+        answer: 'Instead of writing "Author A did X. Author B did Y.", we organize by concept (e.g. "Transformer-based approaches vs. CNN-based approaches for latency-critical inference"), showing where methodologies converge and diverge.'
+      },
+      {
+        question: 'Can you help format references in APA, IEEE, or Harvard styles?',
+        answer: 'Yes, we format citations across all major standards including IEEE, APA 7th, Harvard, ACM, and Springer LNCS.'
+      }
+    ],
+    relatedServices: ['research-paper', 'review-paper', 'ieee-formatting'],
+    relatedResources: ['literature-review-guide', 'review-paper-vs-research-paper'],
+    seoTitle: 'Literature Review Support & Thematic Synthesis | PaperWorks',
+    seoDescription: 'Transform related work into a cohesive thematic literature review. Methodological comparison, research gap articulation, and citation mapping.',
+    keywords: ['literature review support', 'related work synthesis', 'research gap analysis', 'thematic literature review'],
+    sampleVisualType: 'research',
+  },
+
+  {
+    slug: 'paper-editing',
+    route: '/paper-editing',
+    title: 'Research Paper Editing, Proofreading & Academic Polish',
+    shortTitle: 'Paper Editing & Proofreading',
+    category: 'research',
+    categoryLabel: 'Research & Papers',
+    tagline: 'Eliminate grammatical ambiguity, refine academic voice, and sharpen technical prose.',
+    shortDescription: 'Line-by-line editorial refinement focused on technical precision, formal academic register, concise phrasing, and typographical consistency.',
+    description: 'Even ground-breaking technical contributions can receive critical reviewer pushback if obscured by awkward phrasing, run-on sentences, inconsistent terminology, or grammatical lapses. Our technical editing sharpens your manuscript so reviewers focus on your scientific merit.',
+    audience: [
+      'Authors preparing submissions for international peer-reviewed journals',
+      'Non-native English researchers seeking natural, rigorous academic phrasing',
+      'Scholars addressing reviewer feedback requesting language and clarity improvements',

@@ -238,3 +238,143 @@ export const servicesData: ServiceItem[] = [
       'Authors preparing submissions for international peer-reviewed journals',
       'Non-native English researchers seeking natural, rigorous academic phrasing',
       'Scholars addressing reviewer feedback requesting language and clarity improvements',
+    ],
+    scopePoints: [
+      'Sentence-level grammar, syntax, tense consistency, and punctuation correction',
+      'Standardization of technical terminology, abbreviations, and acronym expansions',
+      'Elimination of wordiness and passive redundancies to respect strict page limits',
+      'Auditing figure/table cross-references in text (e.g. "as shown in Fig. 3")',
+      'Ensuring formal, objective academic register throughout',
+    ],
+    deliverables: [
+      'Track-changes manuscript displaying every edit, correction, and rationale (.docx / .tex)',
+      'Clean, publication-ready finalized manuscript',
+      'Summary editor feedback highlighting recurring patterns and style recommendations',
+    ],
+    processSteps: [
+      { title: 'Manuscript Intake', desc: 'Send your complete draft with current word or page count specifications.' },
+      { title: 'Substantive Line Editing', desc: 'Our editors polish syntax, academic tone, and technical precision line by line.' },
+      { title: 'Quality Review', desc: 'A secondary review verifies cross-references, equations, and term consistency.' },
+      { title: 'Author Walkthrough', desc: 'You receive track-changes files to inspect and accept recommendations.' },
+    ],
+    faqs: [
+      {
+        question: 'Will editing change my technical meaning or equations?',
+        answer: 'Never. Technical editing preserves your scientific terminology and mathematics exactly while ensuring grammatical precision and clarity around them.'
+      },
+      {
+        question: 'Do you provide track changes so I can see what was edited?',
+        answer: 'Yes. We deliver documents with tracked revisions and margin comments so you retain full ownership of every word.'
+      }
+    ],
+    relatedServices: ['research-paper', 'ieee-formatting', 'literature-review'],
+    relatedResources: ['how-to-write-research-paper', 'ieee-format-guide'],
+    seoTitle: 'Research Paper Editing & Academic Proofreading Support | PaperWorks',
+    seoDescription: 'Line-by-line technical editing and proofreading for research papers. Academic tone, grammar, terminology consistency, and page-limit optimization.',
+    keywords: ['research paper editing', 'academic proofreading', 'technical manuscript editing', 'scientific paper editing'],
+    sampleVisualType: 'research',
+  },
+
+  // ================= MAJOR & FINAL-YEAR PROJECTS =================
+  {
+    slug: 'major-project',
+    route: '/major-project',
+    title: 'Major Project Support & Technical Guidance',
+    shortTitle: 'Major Project Support',
+    category: 'projects',
+    categoryLabel: 'Major & Final-Year Projects',
+    tagline: 'End-to-end guidance from architecture design and tech stack selection to execution and defense.',
+    shortDescription: 'Holistic assistance for ambitious engineering projects, including system design, module decomposition, testing plans, and technical documentation.',
+    description: 'Major projects in computer science, IT, and engineering disciplines represent the culmination of academic programs. PaperWorks provides technical mentoring, architecture validation, module development guidance, and rigorous reporting to ensure your project meets industrial and academic benchmarks.',
+    audience: [
+      'Final-year B.Tech / B.E. engineering students (CSE, IT, ECE, AI/ML, Data Science)',
+      'Postgraduate MCA, M.Tech, and MSc candidates working on capstone projects',
+      'Student project teams navigating complex software architectures or hardware integration',
+    ],
+    scopePoints: [
+      'System architecture blueprints (microservices, REST/GraphQL APIs, database ER diagrams)',
+      'Module decomposition and sprint planning for multi-member teams',
+      'Codebase review, structural refactoring, and documentation of design patterns',
+      'Unit, integration, and load test documentation',
+      'Preparation of comprehensive project progress presentations',
+    ],
+    deliverables: [
+      'System Architecture Specification document with UML diagrams',
+      'Step-by-step development roadmap and technical execution checklist',
+      'Cleanly documented source code conventions and README runbooks',
+      'Project milestone review slide deck for departmental presentations',
+    ],
+    processSteps: [
+      { title: 'Project Scope Intake', desc: 'Discuss your project domain, technology stack, departmental rubric, and timeline.' },
+      { title: 'Architecture Blueprint', desc: 'We help design clear UML class, sequence, and system architecture diagrams.' },
+      { title: 'Development & Guidance', desc: 'Continuous feedback on module integration, code hygiene, and troubleshooting.' },
+      { title: 'Milestone Review Defense', desc: 'Prepare presentations and technical defense documentation for departmental reviews.' },
+    ],
+    faqs: [
+      {
+        question: 'What technology stacks do you support?',
+        answer: 'We support full-stack web and cloud systems (React, Next.js, Node.js, Python FastAPI/Django, Spring Boot), Mobile (Flutter, React Native), AI/Machine Learning (PyTorch, TensorFlow, OpenCV, Scikit-Learn), and IoT/Embedded systems.'
+      },
+      {
+        question: 'Do you provide ready-made projects to submit blindly?',
+        answer: 'No. We strictly adhere to academic integrity. We provide architectural guidance, code reviews, debugging support, documentation, and viva coaching to ensure you understand and master your project.'
+      }
+    ],
+    relatedServices: ['final-year-project', 'project-report', 'project-documentation'],
+    relatedResources: ['final-year-project-guide', 'project-report-format'],
+    seoTitle: 'Major Project Support & Technical Mentorship for Engineering | PaperWorks',
+    seoDescription: 'Comprehensive major project support for B.Tech, MCA, and engineering students. Architecture design, module guidance, testing, and review prep.',
+    keywords: ['major project support', 'engineering major project guidance', 'capstone project support', 'btech final project assistance'],
+    sampleVisualType: 'project',
+  },
+
+  {
+    slug: 'final-year-project',
+    route: '/final-year-project',
+    title: 'Final-Year Project Support & Capstone Mentorship',
+    shortTitle: 'Final-Year Project Support',
+    category: 'projects',
+    categoryLabel: 'Major & Final-Year Projects',
+    tagline: 'Navigate your capstone semester with structured technical support, reports, and viva readiness.',
+    shortDescription: 'End-to-end guidance covering project synopses, system specifications, mid-term reviews, final thesis reports, and viva voce practice.',
+    description: 'Final-year projects are often stressful due to simultaneous placement drives, exams, and departmental reviews. PaperWorks structures your capstone timeline with professional discipline, delivering rigorous documentation, clear architecture diagrams, and mock viva preparation.',
+    audience: [
+      'Final-year undergraduates (B.Tech, BCA, BSc CS) preparing capstone submissions',
+      'Postgraduate scholars (MCA, M.Tech) executing applied industry projects',
+      'Engineering teams requiring structured guidance for departmental approval reviews',
+    ],
+    scopePoints: [
+      'Feasibility study and technical scope definition to prevent scope creep',
+      'Database schema modeling, API contract specifications, and system data flows',
+      'Mid-term review milestone preparations and presentation drafting',
+      'Comprehensive final report drafting following university formatting ordinances',
+      'Viva voce Q&A preparation with common faculty examiner queries',
+    ],
+    deliverables: [
+      'Formal Project Synopsis document ready for guide approval',
+      'System Requirements Specification (SRS) in IEEE 830 format',
+      'Comprehensive Final Year Project Report (preliminary pages, chapters, bibliography)',
+      'Professional PowerPoint presentation for external defense',
+      'Viva Voce preparation question bank tailored to your tech stack',
+    ],
+    processSteps: [
+      { title: 'Project Onboarding', desc: 'Share your approved project title, university guidelines, guide expectations, and deadlines.' },
+      { title: 'Timeline & Milestone Structuring', desc: 'We map out Phase 1 (Synopsis & SRS) and Phase 2 (Development, Testing & Report).' },
+      { title: 'Iterative Deliverable Crafting', desc: 'Documentation, diagrams, and slide decks crafted to high technical standards.' },
+      { title: 'Viva Defense Prep', desc: 'Detailed Q&A rehearsal focusing on architectural decisions, trade-offs, and algorithms.' },
+    ],
+    faqs: [
+      {
+        question: 'Can you match our specific university report template?',
+        answer: 'Yes. Whether your college follows VTU, Anna University, Mumbai University, AKTU, GGSIPU, or autonomous college guidelines, we format margins, fonts, certificates, and acknowledgments to your exact ordinances.'
+      },
+      {
+        question: 'How do you help with Viva Voce preparation?',
+        answer: 'We provide an examiner question guide addressing why you selected your tech stack, database normalization choices, algorithm complexity, edge cases, and future enhancements.'
+      }
+    ],
+    relatedServices: ['major-project', 'project-report', 'project-documentation'],
+    relatedResources: ['final-year-project-guide', 'project-report-format'],
+    seoTitle: 'Final-Year Project Support & Capstone Guidance | PaperWorks',
+    seoDescription: 'Structured final-year project guidance for engineering students. SRS documentation, milestone presentations, thesis reports, and viva voce defense.',
+    keywords: ['final year project support', 'capstone project guidance', 'engineering project documentation', 'viva preparation'],

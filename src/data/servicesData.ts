@@ -378,3 +378,143 @@ export const servicesData: ServiceItem[] = [
     seoTitle: 'Final-Year Project Support & Capstone Guidance | PaperWorks',
     seoDescription: 'Structured final-year project guidance for engineering students. SRS documentation, milestone presentations, thesis reports, and viva voce defense.',
     keywords: ['final year project support', 'capstone project guidance', 'engineering project documentation', 'viva preparation'],
+    sampleVisualType: 'project',
+  },
+
+  {
+    slug: 'project-report',
+    route: '/project-report',
+    title: 'Project Report Preparation & Formatting',
+    shortTitle: 'Project Report Support',
+    category: 'projects',
+    categoryLabel: 'Major & Final-Year Projects',
+    tagline: 'Transform your technical code into a publication-grade academic project report.',
+    shortDescription: 'Exhaustive thesis documentation including SRS, system design, test cases, screenshots, performance graphs, and university front-matter.',
+    description: 'Writing a 70 to 120-page engineering project report is a daunting task. PaperWorks provides complete report structuring support—from certificate pages, acknowledgments, and table of contents to detailed chapter write-ups, UML diagrams, test suite logs, and IEEE-formatted references.',
+    audience: [
+      'B.Tech, B.E., BCA, and MCA students required to submit spiral or hard-bound project reports',
+      'Project teams with working software who need comprehensive academic documentation',
+      'Students needing immediate formatting assistance to pass guide and HOD review',
+    ],
+    scopePoints: [
+      'Mandatory university front matter (Certificate, Declaration, Acknowledgments, Abstract)',
+      'Chapter 1: Introduction, Problem Statement, Objectives, and Scope',
+      'Chapter 2: Literature Review and Comparative Study of Existing Systems',
+      'Chapter 3: System Requirements Specification (Hardware, Software, Functional & Non-Functional)',
+      'Chapter 4: System Architecture, Data Flow Diagrams (DFD Levels 0-2), and UML Modeling',
+      'Chapter 5: Implementation Details, Key Algorithms, and Database Design (ER Diagrams)',
+      'Chapter 6: Testing Methodology, Test Cases, and Results Analysis',
+      'Chapter 7: Conclusion, Limitations, and Future Enhancements',
+      'References, Appendices, and Clean Screenshot Layouts',
+    ],
+    deliverables: [
+      'Complete, fully formatted Project Report in editable Word (.docx) and print-ready PDF',
+      'High-resolution vector UML diagrams (Use Case, Class, Sequence, Activity, Architecture)',
+      'Structured test case evaluation tables with pass/fail criteria',
+      'Automated dynamic Table of Contents, List of Figures, and List of Tables',
+    ],
+    processSteps: [
+      { title: 'Project Details & College Template', desc: 'Send your code repository, screenshots, project details, and college report guideline PDF.' },
+      { title: 'Chapter Outline & Diagram Generation', desc: 'We structure the narrative and design clean, high-resolution architectural diagrams.' },
+      { title: 'Full Report Compilation', desc: 'Meticulous writing of chapters, technical descriptions, and test case tables.' },
+      { title: 'Format Audit & Final Delivery', desc: 'Page numbering (Roman numerals for front matter, Arabic for chapters), margins, and binding review.' },
+    ],
+    faqs: [
+      {
+        question: 'Are diagrams included in high resolution?',
+        answer: 'Yes. All DFDs, ER diagrams, and UML diagrams are generated as crisp vector or high-DPI visuals that look sharp when printed.'
+      },
+      {
+        question: 'Can you handle both Minor and Major project reports?',
+        answer: 'Yes. We cater to concise 30-40 page Minor project reports as well as comprehensive 80-150 page Major capstone reports.'
+      }
+    ],
+    relatedServices: ['project-documentation', 'final-year-project', 'major-project'],
+    relatedResources: ['project-report-format', 'final-year-project-guide'],
+    seoTitle: 'Engineering Project Report Preparation & University Formatting | PaperWorks',
+    seoDescription: 'Professional project report preparation for B.Tech, MCA, and engineering students. Complete chapters, UML diagrams, test cases, and university guidelines.',
+    keywords: ['project report formatting', 'engineering project report', 'btech project report', 'final year project report format'],
+    sampleVisualType: 'project',
+  },
+
+  {
+    slug: 'project-documentation',
+    route: '/project-documentation',
+    title: 'Project Documentation, Synopsis & Technical Specifications',
+    shortTitle: 'Project Documentation',
+    category: 'projects',
+    categoryLabel: 'Major & Final-Year Projects',
+    tagline: 'Clear, concise project proposals, synopses, and technical runbooks that get immediate faculty sign-off.',
+    shortDescription: 'Preparation of project synopses, IEEE 830 SRS documents, API documentation, deployment runbooks, and viva presentation slide decks.',
+    description: 'Before project development begins and after deployment concludes, documentation serves as the vital bridge between your code and your evaluators. PaperWorks creates polished synopses, comprehensive Software Requirements Specifications (SRS), and developer runbooks.',
+    audience: [
+      'Students pitching capstone ideas seeking prompt synopsis approval',
+      'Student startups and project teams requiring clear API specs and deployment guides',
+      'Graduates preparing technical portfolios showcasing their architectural rigor',
+    ],
+    scopePoints: [
+      'Project Synopsis drafting (Title, Objective, Scope, Technology Stack, Proposed Methodology, References)',
+      'IEEE 830 compliant Software Requirements Specification (SRS)',
+      'Database Schema DDL & Data Dictionary documentation',
+      'REST API contract specification with request/response payloads',
+      'Installation, deployment, and environment configuration runbooks',
+    ],
+    deliverables: [
+      'Faculty-ready Project Synopsis (.docx / .pdf, usually 3-6 pages)',
+      'Standardized IEEE 830 SRS Document',
+      'Technical README and deployment runbook for GitHub repositories',
+      'Slide deck for proposal defense presentation',
+    ],
+    processSteps: [
+      { title: 'Project Brief', desc: 'Share your intended project concept, domain, tools, and supervisor instructions.' },
+      { title: 'Synopsis Drafting', desc: 'We draft the formal proposal articulating technical merit, novelty, and feasible timeline.' },
+      { title: 'SRS & Spec Generation', desc: 'Complete requirements engineering detailing functional and non-functional constraints.' },
+      { title: 'Guide Approval Review', desc: 'Refinements based on feedback from your project guide.' },
+    ],
+    faqs: [
+      {
+        question: 'How long is a typical project synopsis?',
+        answer: 'Most university departments require a 3 to 8 page document outlining problem statement, literature background, proposed methodology, modules, hardware/software specifications, and expected outcomes.'
+      },
+      {
+        question: 'Do you help if the guide asks for modifications in the proposal?',
+        answer: 'Yes. We include permitted review iterations to adjust the proposed scope or tech stack based on supervisor recommendations.'
+      }
+    ],
+    relatedServices: ['project-report', 'final-year-project', 'major-project'],
+    relatedResources: ['project-report-format', 'final-year-project-guide'],
+    seoTitle: 'Project Synopsis & Technical Documentation Support | PaperWorks',
+    seoDescription: 'Professional project synopsis and SRS documentation for engineering students. High-acceptance proposals, IEEE 830 specs, and API runbooks.',
+    keywords: ['project synopsis support', 'project documentation', 'srs document preparation', 'engineering project proposal'],
+    sampleVisualType: 'project',
+  },
+
+  // ================= CAREER DOCUMENTS =================
+  {
+    slug: 'ats-resume',
+    route: '/ats-resume',
+    title: 'ATS-Friendly Resume Support for Freshers & Engineers',
+    shortTitle: 'ATS-Friendly Resume Support',
+    category: 'career',
+    categoryLabel: 'Career Documents',
+    tagline: 'Clean, parseable, keyword-aligned resumes engineered to pass recruiter screeners and Applicant Tracking Systems.',
+    shortDescription: 'Single-column ATS formatting, impact-driven bullet formulation, technical skill categorization, and role-targeted keyword integration.',
+    description: 'Over 90% of mid-to-large technology companies filter candidates through Applicant Tracking Systems (ATS) like Workday, Greenhouse, Taleo, and Lever before a human recruiter ever sees them. We transform scattered student resumes into high-parseability documents that highlight technical impact, GitHub projects, and relevant coursework.',
+    audience: [
+      'Final-year college students preparing for campus placements and off-campus drives',
+      'Fresh software engineers, data analysts, and technical graduates entering the job market',
+      'Professionals with 0-3 years experience transitioning to new technical roles',
+    ],
+    scopePoints: [
+      'Clean, single-column typographical hierarchy without tables, text boxes, or unparseable columns',
+      'Action-oriented bullet crafting using the XYZ formula ("Accomplished [X], as measured by [Y], by doing [Z]")',
+      'Categorized technical skills section (Languages, Frameworks, Developer Tools, Core Concepts)',
+      'Strategic presentation of academic projects with live demo and GitHub repository hyperlinks',
+      'Standardized section headers recognized by ATS parsers (Education, Experience, Projects, Skills)',
+    ],
+    deliverables: [
+      'ATS-Optimized resume in editable Microsoft Word (.docx)',
+      'Vector PDF export with live clickable hyperlinks and embedded standard fonts',
+      'Plain text (.txt) export for copy-pasting directly into portal application fields',
+      'ATS Parseability checklist verifying section recognition and keyword density',
+    ],

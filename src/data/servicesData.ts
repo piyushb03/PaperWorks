@@ -518,3 +518,103 @@ export const servicesData: ServiceItem[] = [
       'Plain text (.txt) export for copy-pasting directly into portal application fields',
       'ATS Parseability checklist verifying section recognition and keyword density',
     ],
+    processSteps: [
+      { title: 'Profile & Target Role Intake', desc: 'Share your current resume, LinkedIn, GitHub, academic marks, and target job profiles.' },
+      { title: 'Bullet Crafting & Impact Refinement', desc: 'We rewrite project and internship bullets to highlight metrics, technologies, and outcomes.' },
+      { title: 'ATS Formatting & Layout', desc: 'We build a pristine single-column layout adhering to strict parsing standards.' },
+      { title: 'Review & Final Polish', desc: 'You inspect the resume, test it against target job descriptions, and finalize.' },
+    ],
+    faqs: [
+      {
+        question: 'Why do two-column resumes often fail ATS scans?',
+        answer: 'Many legacy ATS parsers read text horizontally from left to right across the entire page, causing two-column text to get mangled into an incoherent stream of words.'
+      },
+      {
+        question: 'Do you promise job placements or guaranteed interview calls?',
+        answer: 'No. No honest service can guarantee employment. We ensure your resume is formatted with maximal ATS parseability and compelling technical communication so your qualifications receive the attention they deserve.'
+      },
+      {
+        question: 'Should a fresher resume be one page or two pages?',
+        answer: 'For freshers and engineers with under 4 years of experience, a tightly edited single-page resume is the industry gold standard in tech recruiting.'
+      }
+    ],
+    relatedServices: ['cv', 'academic-documents'],
+    relatedResources: ['ats-resume-guide'],
+    seoTitle: 'ATS-Friendly Resume Support for Freshers & Tech Graduates | PaperWorks',
+    seoDescription: 'Transform your college projects and skills into an ATS-compliant resume. Clean single-column formatting, quantifiable bullets, and keyword optimization.',
+    keywords: ['ats friendly resume', 'fresher resume support', 'engineering resume formatting', 'ats resume format for freshers'],
+    sampleVisualType: 'resume',
+  },
+
+  {
+    slug: 'cv',
+    route: '/cv',
+    title: 'Curriculum Vitae (CV) Support for Academia & Higher Studies',
+    shortTitle: 'Academic CV Support',
+    category: 'career',
+    categoryLabel: 'Career Documents',
+    tagline: 'Comprehensive, scholarly CVs designed for master’s applications, PhD admissions, and fellowship programs.',
+    shortDescription: 'In-depth academic CVs highlighting publications, research experience, teaching assistantships, grants, and scholarly honors.',
+    description: 'Unlike a concise 1-page corporate resume, an academic Curriculum Vitae (CV) is an exhaustive record of your scholarly trajectory. PaperWorks crafts structured, dignified academic CVs tailored for MS/PhD admissions, faculty positions, research lab fellowships, and international scholarships.',
+    audience: [
+      'Students applying for MS or PhD programs in the US, Europe, Canada, and Asia',
+      'Research scholars applying for post-doctoral fellowships or research assistantships (RA/TA)',
+      'Faculty and research scientists updating institutional dossiers',
+    ],
+    scopePoints: [
+      'Scholarly section hierarchy (Education, Research Interests, Publications, Presentations, Grants, Awards)',
+      'Accurate publication bibliographic citations with paper titles, co-authors, and venues',
+      'Detailed descriptions of lab experiments, technical methodologies, and research leadership',
+      'Clean typography with consistent margins, dates, and institutional affiliations',
+    ],
+    deliverables: [
+      'Comprehensive Academic CV in editable Word (.docx) and high-resolution PDF',
+      'Formatted bibliography section adhering to academic citation guidelines',
+      'Admissions-focused suggestions for statement of purpose (SOP) alignment',
+    ],
+    processSteps: [
+      { title: 'Academic Profile Collection', desc: 'Share your educational background, published papers, conference talks, and target programs.' },
+      { title: 'Curricular Structure Design', desc: 'We organize your scholarly achievements with appropriate weight given to research output.' },
+      { title: 'Editorial Polish', desc: 'Polishing narrative descriptions of research projects and institutional roles.' },
+      { title: 'Final Inspection', desc: 'Ensuring consistency across typography, dates, and international application formats.' },
+    ],
+    faqs: [
+      {
+        question: 'How is an academic CV different from a corporate resume?',
+        answer: 'A resume is typically 1 page focused on immediate job skill match. An academic CV has no strict page limit and exhaustively documents publications, teaching, research, and scholarly honors.'
+      },
+      {
+        question: 'Can this CV be used for DAAD, Fulbright, or Erasmus Mundus scholarship applications?',
+        answer: 'Yes. We align academic CVs to international higher education scholarship standards and university graduate admissions committees.'
+      }
+    ],
+    relatedServices: ['ats-resume', 'research-paper'],
+    relatedResources: ['ats-resume-guide', 'how-to-write-research-paper'],
+    seoTitle: 'Academic CV Support for Graduate Admissions & Fellowships | PaperWorks',
+    seoDescription: 'Comprehensive academic CV preparation for MS, PhD admissions, and research fellowships. Scholarly publication formatting and research trajectory.',
+    keywords: ['academic cv support', 'curriculum vitae for phd', 'graduate school cv', 'research scholar cv'],
+    sampleVisualType: 'resume',
+  },
+
+  // ================= ACADEMIC DOCUMENTS =================
+  {
+    slug: 'academic-documents',
+    route: '/academic-documents',
+    title: 'Academic & Technical Documents Support',
+    shortTitle: 'Academic Documents Support',
+    category: 'academic',
+    categoryLabel: 'Academic Documents',
+    tagline: 'Precision formatting and editorial structuring for seminar reports, technical briefs, and institutional manuals.',
+    shortDescription: 'Formatting and documentation support for technical seminar reports, lab manuals, case study summaries, and institutional submissions.',
+    description: 'Engineering and university curricula require numerous formal documents beyond the major project—including technical seminar reports, term papers, internship training summaries, and lab experiment manuals. PaperWorks ensures every submission reflects professional engineering documentation standards.',
+    audience: [
+      'Students preparing semester technical seminar reports and industrial training summaries',
+      'Research groups compiling laboratory procedure guides and technical whitepapers',
+      'Undergraduate and master’s students requiring fastidious academic formatting',
+    ],
+    scopePoints: [
+      'Structuring technical seminar reports (Abstract, Literature Review, Case Study, Conclusion)',
+      'Industrial training and internship report compilation with company verification pages',
+      'Formatting consistency (standard margins, fonts, headers/footers, and figure captions)',
+      'Citation and bibliography hygiene in university-mandated styles',
+    ],

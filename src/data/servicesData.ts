@@ -618,3 +618,92 @@ export const servicesData: ServiceItem[] = [
       'Formatting consistency (standard margins, fonts, headers/footers, and figure captions)',
       'Citation and bibliography hygiene in university-mandated styles',
     ],
+    deliverables: [
+      'Fully structured and formatted report (.docx and print-ready PDF)',
+      'Clean vector diagrams, charts, and table alignments',
+      'Automated table of contents and figure lists',
+    ],
+    processSteps: [
+      { title: 'Topic & Rubric Review', desc: 'Share your seminar topic, guidelines, and departmental submission specifications.' },
+      { title: 'Draft Structuring', desc: 'We organize technical content logically with proper academic flow and transitions.' },
+      { title: 'Formatting & Typography', desc: 'Applying uniform styles, captions, equations, and page numbers.' },
+      { title: 'Final Handover', desc: 'Final review to ensure seamless printing and evaluation readiness.' },
+    ],
+    faqs: [
+      {
+        question: 'What types of academic reports do you format?',
+        answer: 'We assist with technical seminar reports, summer internship reports, industrial training reports, term papers, and laboratory experiment manuals.'
+      },
+      {
+        question: 'Can you work with strict page constraints (e.g. exactly 25 pages)?',
+        answer: 'Yes. We adjust formatting, spacing, and content distribution to hit specific departmental page targets cleanly.'
+      }
+    ],
+    relatedServices: ['presentations', 'project-report'],
+    relatedResources: ['project-report-format'],
+    seoTitle: 'Academic Documents & Technical Seminar Report Support | PaperWorks',
+    seoDescription: 'Professional formatting for technical seminar reports, industrial training summaries, and academic whitepapers. Fastidious university compliance.',
+    keywords: ['academic documents support', 'seminar report formatting', 'technical report preparation', 'internship training report'],
+    sampleVisualType: 'project',
+  },
+
+  {
+    slug: 'presentations',
+    route: '/presentations',
+    title: 'Technical Presentations & Defense Slide Deck Support',
+    shortTitle: 'Technical Presentation Support',
+    category: 'academic',
+    categoryLabel: 'Academic Documents',
+    tagline: 'High-impact slide decks crafted for project reviews, conference presentations, and viva defenses.',
+    shortDescription: 'Clean, legible presentation design focused on architecture diagrams, methodology workflows, live demo cues, and concise talking points.',
+    description: 'Evaluation panels and conference audiences judge your work in under 15 minutes. Cluttered slides with tiny text and low-resolution screenshots undermine great engineering. PaperWorks creates minimalist, high-contrast, technical slide decks that communicate complex concepts with immediate clarity.',
+    audience: [
+      'Students presenting project proposals, mid-term reviews, and final year vivas',
+      'Researchers presenting accepted papers at IEEE and international conferences',
+      'Graduates defending thesis projects in front of external examiners',
+    ],
+    scopePoints: [
+      'Clean slide layout following the 6x6 rule (concise bullets, generous whitespace, large typography)',
+      'High-contrast system architecture and data-flow diagrams tailored for projectors',
+      'Results presentation using clear benchmark charts and comparative tables',
+      'Slide-by-slide speaker notes highlighting key talking points for confident delivery',
+      'Backup slides addressing expected tough questions from examiners',
+    ],
+    deliverables: [
+      'Editable Microsoft PowerPoint presentation (.pptx)',
+      'Self-contained vector PDF version for seamless presentation on any computer',
+      'Slide-by-slide speaker notes runbook',
+      'Master slide template matching PaperWorks editorial clarity',
+    ],
+    processSteps: [
+      { title: 'Content & Duration Brief', desc: 'Share your paper, project report, allocated presentation time (e.g. 10 mins), and rubric.' },
+      { title: 'Storyboard & Slide Outline', desc: 'We determine slide allocation (Problem, Architecture, Results, Demo, Q&A).' },
+      { title: 'Visual Design & Diagramming', desc: 'Crafting clean vector slides with legible typography and crisp diagram cards.' },
+      { title: 'Speaker Notes & Defense Prep', desc: 'Adding concise speaker cues to ensure a smooth, confident delivery.' },
+    ],
+    faqs: [
+      {
+        question: 'How many slides are appropriate for a 10-minute project presentation?',
+        answer: 'A standard 10-minute presentation should have roughly 10 to 12 slides (approx. 1 minute per slide) plus 2-3 backup slides for technical examiner questions.'
+      },
+      {
+        question: 'Do you use animations and transitions?',
+        answer: 'We use only subtle, professional slide builds (e.g. revealing architectural layers sequentially). We strictly avoid distracting spins, flips, or sounds.'
+      }
+    ],
+    relatedServices: ['academic-documents', 'project-report', 'final-year-project'],
+    relatedResources: ['project-report-format', 'final-year-project-guide'],
+    seoTitle: 'Technical Presentation & Defense Slide Deck Support | PaperWorks',
+    seoDescription: 'High-impact slide decks for engineering project reviews and conference paper presentations. Clean architecture visuals and speaker notes.',
+    keywords: ['technical presentation support', 'project viva ppt', 'conference presentation slides', 'defense slide deck'],
+    sampleVisualType: 'project',
+  },
+];
+
+export const getServiceBySlug = (slug: string): ServiceItem | undefined => {
+  return servicesData.find((s) => s.slug === slug);
+};
+
+export const getServicesByCategory = (category: ServiceItem['category']): ServiceItem[] => {
+  return servicesData.filter((s) => s.category === category);
+};

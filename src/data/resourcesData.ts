@@ -98,3 +98,103 @@ export const resourcesData: ResourceItem[] = [
           '• Mathematical Equations: Center the equation in the column and place the equation number in parentheses flush right: (1). Refer to equations in text as "(1)" or "Equation (1)" at the start of a sentence.',
           '• Figures: Placed at the top or bottom of a column. Captions are placed BELOW the figure (e.g., "Fig. 1. Block diagram of proposed framework.").',
           '• Tables: Captions are placed ABOVE the table in Small Caps (e.g., "TABLE I: PERFORMANCE COMPARISON").',
+        ],
+        checklist: [
+          'Are figures clear at 300 DPI without blurry text?',
+          'Are equations numbered sequentially with parentheses flush right?',
+          'Are captions placed below figures and above tables?',
+        ],
+      },
+      {
+        heading: '4. Final Page Column Balancing',
+        paragraphs: [
+          'A very common formatting error in IEEE submissions is leaving the final page with an uneven column height (e.g. left column full, right column empty). IEEE guidelines require column balancing on the final page so both columns terminate at the same vertical height.',
+        ],
+        keyTakeaway: 'In Microsoft Word, insert a Continuous Section Break before the References to automatically balance columns on the final page.',
+      },
+    ],
+  },
+
+  {
+    slug: 'review-paper-vs-research-paper',
+    route: '/resources/review-paper-vs-research-paper',
+    title: 'Research Paper vs Review Paper: Structural Differences & When to Choose Each',
+    category: 'Scholarly Writing',
+    readTime: '6 min read',
+    description: 'Understand the distinct objectives, methodological expectations, and structural differences between original research papers and review surveys.',
+    summary: 'A side-by-side comparison of empirical research papers versus systematic review surveys to help scholars choose the right publication format.',
+    publishedDate: '2025-02-12T11:00:00Z',
+    seoTitle: 'Research Paper vs Review Paper: Key Differences & Structure | PaperWorks',
+    seoDescription: 'Comprehensive comparison between a research paper and a review paper. Learn structural differences, citation depth, and when to write each.',
+    keywords: ['research paper vs review paper', 'difference between research paper and review paper', 'survey paper writing', 'review paper format'],
+    relatedServices: ['review-paper', 'research-paper', 'literature-review'],
+    relatedResources: ['how-to-write-research-paper', 'literature-review-guide'],
+    sections: [
+      {
+        heading: '1. Primary Objective Comparison',
+        paragraphs: [
+          'While both manuscript types advance scholarly understanding, their core purpose is fundamentally different:',
+          '• Research Paper (Original Article): Reports primary research and empirical findings. The author formulates a hypothesis, designs an experiment, collects novel data, and evaluates the outcome.',
+          '• Review Paper (Survey Article): Synthesizes secondary literature. The author systematically examines dozens or hundreds of published papers, identifies prevailing paradigms, compares benchmarks, and highlights unexplored research gaps.',
+        ],
+      },
+      {
+        heading: '2. Structural Breakdown Comparison',
+        paragraphs: [
+          'In a research paper, the heart of the document is Section III (Proposed Methodology) and Section IV (Experimental Results). The literature review occupies only one introductory section.',
+          'In a review paper, literature analysis IS the paper. The core consists of systematic taxonomies, comparison matrices, methodological trade-off tables, and deep analytical discussions on future horizons.',
+        ],
+        keyTakeaway: 'A good review paper is not a book report; it provides original synthesis and comparative insight that does not exist in any single source paper.',
+      },
+      {
+        heading: '3. When Should You Write Which?',
+        paragraphs: [
+          'Choose a Research Paper when: You have conducted concrete experiments, developed an algorithm, built a prototype, or collected proprietary benchmark datasets.',
+          'Choose a Review Paper when: You are starting a PhD or Master’s thesis and need to master the field, or when a domain has experienced rapid publication growth and lacks a recent cohesive survey organizing state-of-the-art developments.',
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: 'literature-review-guide',
+    route: '/resources/literature-review-guide',
+    title: 'How to Write a Comprehensive Literature Review: Thematic Synthesis & Gap Identification',
+    category: 'Research Methodologies',
+    readTime: '8 min read',
+    description: 'Learn how to transition from an annotated bibliography to an analytical thematic synthesis that clearly defends your research problem.',
+    summary: 'Step-by-step methodology for searching academic databases, constructing a literature synthesis matrix, and pinpointing convincing research gaps.',
+    publishedDate: '2025-02-20T10:00:00Z',
+    seoTitle: 'How to Write a Literature Review: Thematic Synthesis & Gaps | PaperWorks',
+    seoDescription: 'Master the art of writing a thematic literature review for dissertations and journal papers. Avoid simple listing and construct rigorous comparison matrices.',
+    keywords: ['how to write a literature review', 'literature synthesis matrix', 'identifying research gaps', 'dissertation literature review'],
+    relatedServices: ['literature-review', 'research-paper', 'review-paper'],
+    relatedResources: ['review-paper-vs-research-paper', 'how-to-write-research-paper'],
+    sections: [
+      {
+        heading: '1. Escaping the "Annotated Bibliography" Trap',
+        paragraphs: [
+          'The most frequent flaw in student literature reviews is writing disconnected, sequential paragraphs: "Smith et al. (2021) proposed X. In 2022, Wang et al. did Y. Jones (2023) developed Z."',
+          'This reads as an annotated catalog, not a scholarly review. A strong literature review is organized around themes, challenges, or methodological families.',
+        ],
+        keyTakeaway: 'Group studies by their fundamental approach or constraint (e.g., "Edge-computing solutions with memory constraints") and evaluate how researchers address that shared challenge.',
+      },
+      {
+        heading: '2. Building a Synthesis Matrix',
+        paragraphs: [
+          'Before drafting text, construct a 5-column spreadsheet:',
+          '1. Citation & Year',
+          '2. Core Technical Architecture / Algorithm',
+          '3. Benchmark Dataset & Sample Size',
+          '4. Quantitative Results Achieved',
+          '5. Explicit Limitations & Unhandled Assumptions',
+          'Sorting this matrix reveals where existing solutions bottleneck, directly highlighting your research gap.',
+        ],
+      },
+      {
+        heading: '3. Articulating the Research Gap',
+        paragraphs: [
+          'Your literature review must lead naturally to a cliffhanger that only your proposed research can solve. Frame the research gap around concrete dimensions:',
+          '• Computational Efficiency: Existing methods yield high accuracy but cannot run on edge hardware.',
+          '• Generalizability: Algorithms overfit to homogeneous datasets and fail under real-world domain shift.',
+          '• Scalability: Latency grows exponentially as graph dimensions expand.',

@@ -278,3 +278,83 @@ export const resourcesData: ResourceItem[] = [
           '6. Table of Contents',
           '7. List of Figures (with exact page numbers)',
           '8. List of Tables (with exact page numbers)',
+          'Note: Front matter pages are numbered with lowercase Roman numerals (i, ii, iii...), while Chapter 1 onward uses Arabic numerals (1, 2, 3...).',
+        ],
+      },
+      {
+        heading: '2. Standard Seven-Chapter Body Layout',
+        paragraphs: [
+          '• Chapter 1: Introduction (Background, Problem Statement, Objectives, Scope, Organization of Report)',
+          '• Chapter 2: Literature Survey (Analysis of 10-15 related systems and research gap statement)',
+          '• Chapter 3: System Requirements Specification (Hardware, Software, Functional & Non-Functional Requirements)',
+          '• Chapter 4: System Design & Architecture (Architecture Block Diagram, DFD Levels 0-2, UML Class & Sequence Diagrams)',
+          '• Chapter 5: Implementation & Methodology (Algorithms, Database Schema ER diagrams, Module Descriptions)',
+          '• Chapter 6: Testing & Results (Unit & Integration Test Cases table, Performance Benchmark Graphs, GUI Screenshots)',
+          '• Chapter 7: Conclusion & Future Scope (Summary of completed work, Limitations, Potential Future Work)',
+        ],
+      },
+      {
+        heading: '3. Typography and Page Setup Specifications',
+        paragraphs: [
+          '• Paper Size: Standard A4 (210 x 297 mm)',
+          '• Margins: Left margin 1.5 inches (38 mm) to accommodate spiral or hardbound binding; Right, Top, and Bottom 1.0 inch (25.4 mm)',
+          '• Font: Times New Roman, 12 pt for body, 1.5 line spacing, Fully Justified',
+          '• Headings: Chapter titles in 16 pt Bold; Main section heads in 14 pt Bold; Sub-sections in 12 pt Bold',
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: 'ats-resume-guide',
+    route: '/resources/ats-resume-guide',
+    title: 'ATS Resume Guide for Freshers: Formatting Rules, Keywords & Common Traps',
+    category: 'Career Documents',
+    readTime: '7 min read',
+    description: 'How to build a clean, parseable resume that breezes through Applicant Tracking Systems (ATS) and earns human recruiter interviews.',
+    summary: 'Discover the exact single-column format, XYZ accomplishment formula, and keyword optimization strategies favored by top tech hiring teams.',
+    publishedDate: '2025-03-12T14:00:00Z',
+    seoTitle: 'ATS Resume Guide for Freshers & Tech Graduates | PaperWorks',
+    seoDescription: 'Master ATS resume writing for fresh software engineers. Learn single-column formatting rules, action verbs, keyword placement, and avoid parser errors.',
+    keywords: ['ats resume guide', 'fresher resume format', 'ats friendly resume tips', 'software engineer resume for freshers'],
+    relatedServices: ['ats-resume', 'cv'],
+    relatedResources: ['how-to-write-research-paper'],
+    sections: [
+      {
+        heading: '1. What Applicant Tracking Systems Actually Do',
+        paragraphs: [
+          'An Applicant Tracking System (ATS) is automated enterprise software used by recruiters to organize, search, and rank applicant resumes.',
+          'When you upload your resume, the parser strips away formatting and extracts your text into database fields: Name, Contact Info, Education, Experience, and Skills. If your resume uses complex multi-column tables, floating text boxes, or graphics, the parser scrambles the text, resulting in immediate filtering out.',
+        ],
+      },
+      {
+        heading: '2. The Strict Single-Column Formatting Rules',
+        paragraphs: [
+          '• Format: Clean, single-column layout from top to bottom.',
+          '• Typography: Standard fonts (Inter, Arial, Calibri, Helvetica, Georgia) in 10-11 pt for body, 12-14 pt for headings.',
+          '• Margins: 0.5 to 0.75 inches on all four sides.',
+          '• File Format: PDF (with live selectable text) or .docx.',
+          '• DO NOT include: Headshot photos, skill progress bars (e.g. "Python: 80%"), nested tables, icons, or headers/footers with critical contact information.',
+        ],
+        checklist: [
+          'Can you select and copy every word of your PDF without missing characters?',
+          'Are standard section names used (Education, Technical Skills, Projects, Experience)?',
+          'Is your contact info (Email, Phone, LinkedIn, GitHub) in the main body, not header margins?',
+        ],
+      },
+      {
+        heading: '3. Crafting XYZ Bullets for Academic Projects',
+        paragraphs: [
+          'Recruiters look for evidence of problem solving, not passive task lists. Use Google’s XYZ framework: "Accomplished [X], as measured by [Y], by doing [Z]."',
+          'Weak: "Made an e-commerce website using React and Node.js."',
+          'Strong: "Architected a scalable full-stack inventory platform using React and Node.js with Redis caching, reducing database read latency by 42% across 1,000 simulated queries."',
+        ],
+        keyTakeaway: 'Always include measurable metrics (latency, accuracy, queries per second, user test scores) in your project descriptions.',
+      },
+    ],
+  },
+];
+
+export const getResourceBySlug = (slug: string): ResourceItem | undefined => {
+  return resourcesData.find((r) => r.slug === slug);
+};

@@ -198,3 +198,83 @@ export const resourcesData: ResourceItem[] = [
           '• Computational Efficiency: Existing methods yield high accuracy but cannot run on edge hardware.',
           '• Generalizability: Algorithms overfit to homogeneous datasets and fail under real-world domain shift.',
           '• Scalability: Latency grows exponentially as graph dimensions expand.',
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: 'final-year-project-guide',
+    route: '/resources/final-year-project-guide',
+    title: 'The Complete Engineering Final-Year Project Guide: From Concept to Defense',
+    category: 'Engineering Projects',
+    readTime: '9 min read',
+    description: 'A structured roadmap for engineering teams navigating project topic selection, architecture design, milestone reviews, and external viva defense.',
+    summary: 'Avoid project failure traps with this practical guide covering feasibility vetting, module decomposition, mentor management, and examiner Q&A.',
+    publishedDate: '2025-02-28T12:00:00Z',
+    seoTitle: 'Engineering Final-Year Project Guide: Concept to Viva Defense | PaperWorks',
+    seoDescription: 'Complete roadmap for B.Tech, MCA, and engineering final-year projects. Topic selection, system architecture, milestone reviews, and viva defense.',
+    keywords: ['final year project guide', 'engineering capstone roadmap', 'btech final year project ideas', 'project viva preparation'],
+    relatedServices: ['final-year-project', 'major-project', 'project-report'],
+    relatedResources: ['project-report-format'],
+    sections: [
+      {
+        heading: '1. Selecting a Viable Project Topic',
+        paragraphs: [
+          'A successful final-year project balances ambition with semester feasibility. Avoid two extremes: the trivial CRUD application (e.g. basic e-commerce store with zero algorithmic complexity) and the impossibly broad moonshot (e.g. training a 100-billion-parameter LLM without GPU funding).',
+          'Opt for domain-specific applications with a clear algorithmic or analytical layer: automated diagnostic assistance on public medical imaging, privacy-preserving telemetry aggregation, or real-time distributed sensor anomaly detection.',
+        ],
+        checklist: [
+          'Is open benchmark data readily accessible for training and testing?',
+          'Can a minimum viable module be demonstrated within the first 6 weeks?',
+          'Does the project involve measurable engineering trade-offs?',
+        ],
+      },
+      {
+        heading: '2. Decomposing the Project into Sprints',
+        paragraphs: [
+          'Treat your capstone like an industry engineering sprint rather than an all-nighter before submission:',
+          '• Phase 1 (Weeks 1-4): Literature study, Problem formulation, Synopsis approval, SRS draft.',
+          '• Phase 2 (Weeks 5-8): System architecture, Database schema, Core module proof-of-concept.',
+          '• Phase 3 (Weeks 9-12): Integration, Frontend/Backend connectivity, Testing, Benchmark logging.',
+          '• Phase 4 (Weeks 13-16): Project report compilation, Presentation slide deck, Mock viva rehearsal.',
+        ],
+      },
+      {
+        heading: '3. Acing the Final External Viva Voce',
+        paragraphs: [
+          'External examiners rarely evaluate code line by line. Instead, they probe your architectural reasoning and foundational computer science principles.',
+          'Expect questions such as: "Why did you select MongoDB over PostgreSQL for this schema?", "What is the time complexity of your search routine?", "How does your system behave if the third-party API returns a 500 error?", and "If this system handled 100,000 concurrent users, what would fail first?"',
+        ],
+        keyTakeaway: 'Never guess answers during viva. If unsure of an edge case, state your engineering hypothesis calmly: "While we have not benchmarked that specific case, based on our memory footprint we would expect..."',
+      },
+    ],
+  },
+
+  {
+    slug: 'project-report-format',
+    route: '/resources/project-report-format',
+    title: 'Engineering Project Report Structure & Formatting Guidelines: Complete Chapter Breakdown',
+    category: 'Documentation Standards',
+    readTime: '8 min read',
+    description: 'A detailed blueprint for formatting university-grade B.Tech and MCA major project reports according to academic ordinances.',
+    summary: 'Comprehensive breakdown of report front matter, chapter hierarchies, UML diagrams, test cases, and bibliography formatting.',
+    publishedDate: '2025-03-05T08:00:00Z',
+    seoTitle: 'Project Report Format for Engineering: Complete Chapter Blueprint | PaperWorks',
+    seoDescription: 'Standard university project report format for B.Tech, MCA, and engineering students. Detailed guidelines for chapters, diagrams, margins, and front matter.',
+    keywords: ['project report format', 'btech project report structure', 'engineering report guidelines', 'final year project thesis format'],
+    relatedServices: ['project-report', 'project-documentation', 'final-year-project'],
+    relatedResources: ['final-year-project-guide'],
+    sections: [
+      {
+        heading: '1. Mandatory University Front Matter Sequence',
+        paragraphs: [
+          'Engineering project reports adhere to a standardized sequence before Chapter 1 begins:',
+          '1. Cover Page & Inner Title Page (with college insignia, department, student names, and roll numbers)',
+          '2. Bonafide Certificate (signed by Project Guide, Head of Department, and External Examiner)',
+          '3. Declaration by Students',
+          '4. Acknowledgments',
+          '5. Abstract (executive summary of problem, methodology, and outcome, under 350 words)',
+          '6. Table of Contents',
+          '7. List of Figures (with exact page numbers)',
+          '8. List of Tables (with exact page numbers)',

@@ -58,3 +58,68 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantStyles = {
+    primary:
+      'bg-[#111827] text-white hover:bg-[#1F2937] shadow-sm border border-transparent',
+    accent:
+      'bg-[#3157D5] text-white hover:bg-[#2444B2] shadow-sm border border-transparent',
+    secondary:
+      'bg-white text-[#111827] border border-[#E5E7EB] hover:bg-[#F9FAFB] hover:border-[#D1D5DB] shadow-xs',
+    outline:
+      'bg-transparent text-[#111827] border border-[#D1D5DB] hover:bg-black/5',
+    ghost:
+      'bg-transparent text-[#4B5563] hover:text-[#111827] hover:bg-black/5',
+    telegram:
+      'bg-[#229ED9] text-white hover:bg-[#1D8BC0] shadow-sm border border-transparent font-medium',
+  };
+
+  const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
+
+  const content = (
+    <>
+      {icon && iconPosition === 'left' && <span className="flex-shrink-0">{icon}</span>}
+      <span>{children}</span>
+      {icon && iconPosition === 'right' && <span className="flex-shrink-0">{icon}</span>}
+    </>
+  );
+
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={combinedStyles}
+        onClick={handleClick}
+        aria-label={ariaLabel}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  if (href) {
+    const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+    return (
+      <a
+        href={href}
+        className={combinedStyles}
+        onClick={handleClick}
+        target={isExternal && !href.startsWith('mailto:') ? '_blank' : undefined}
+        rel={isExternal && !href.startsWith('mailto:') ? 'noopener noreferrer' : undefined}
+        aria-label={ariaLabel}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      type={type}
+      className={combinedStyles}
+      onClick={handleClick}
+      disabled={disabled}
+      aria-label={ariaLabel}
+    >
+      {content}
+    </button>
+  );
+};

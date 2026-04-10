@@ -138,3 +138,83 @@ export const ContactCard: React.FC<ContactCardProps> = ({ defaultService = '', c
                 onChange={(e) => setService(e.target.value)}
                 className="w-full text-sm bg-[#F9FAFB] border border-[#D1D5DB] rounded-lg px-3.5 py-2.5 text-[#111827] focus:border-[#3157D5] focus:bg-white"
               >
+                {servicesList.map((svc) => (
+                  <option key={svc} value={svc}>
+                    {svc}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Target timeline */}
+            <div>
+              <label htmlFor="timeline-select" className="block text-xs font-semibold text-[#374151] mb-1.5">
+                Target Deadline / Urgency
+              </label>
+              <select
+                id="timeline-select"
+                value={deadline}
+                onChange={(e) => setDeadline(e.target.value)}
+                className="w-full text-sm bg-[#F9FAFB] border border-[#D1D5DB] rounded-lg px-3.5 py-2.5 text-[#111827] focus:border-[#3157D5] focus:bg-white"
+              >
+                <option value="Urgent (1–3 days)">Urgent (1–3 days)</option>
+                <option value="Within 1 week">Within 1 week</option>
+                <option value="Within 2 weeks">Within 2 weeks</option>
+                <option value="Within 1 month">Within 1 month</option>
+                <option value="Flexible / Just Planning">Flexible / Just Planning</option>
+              </select>
+            </div>
+
+            {/* Specific notes */}
+            <div>
+              <label htmlFor="project-notes" className="block text-xs font-semibold text-[#374151] mb-1.5">
+                Brief Scope / Specific Requirements (Optional)
+              </label>
+              <textarea
+                id="project-notes"
+                rows={3}
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
+                placeholder="e.g. IEEE conference submission in 10 days, 6 pages draft ready, needs two-column formatting and reference checking..."
+                className="w-full text-sm bg-[#F9FAFB] border border-[#D1D5DB] rounded-lg p-3 text-[#111827] placeholder:text-gray-400 focus:border-[#3157D5] focus:bg-white"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="mt-8 pt-4 border-t border-[#F3F4F6]">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            <Button
+              href={telegramHref()}
+              variant="telegram"
+              size="lg"
+              className="flex-1"
+              icon={<Send className="w-4 h-4" />}
+              analyticsEvent="telegram_click"
+              analyticsData={{ service, deadline }}
+            >
+              Open in Telegram
+            </Button>
+
+            <Button
+              href={emailHref()}
+              variant="primary"
+              size="lg"
+              className="flex-1"
+              icon={<Mail className="w-4 h-4" />}
+              analyticsEvent="email_click"
+              analyticsData={{ service, deadline }}
+            >
+              Open in Email App
+            </Button>
+          </div>
+
+          <p className="text-[11px] text-[#6B7280] text-center mt-3">
+            No registration required. We discuss scope directly with you.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};

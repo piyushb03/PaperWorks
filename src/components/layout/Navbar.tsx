@@ -148,3 +148,93 @@ export const Navbar: React.FC = () => {
                         {group.items.map((sub, sIdx) => (
                           <li key={sIdx}>
                             <Link
+                              to={sub.href}
+                              className="block py-1.5 px-2 text-xs font-medium text-[#4B5563] hover:text-[#111827] hover:bg-[#F9FAFB] rounded transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  <div className="col-span-2 pt-3 border-t border-[#F3F4F6] flex items-center justify-between text-xs text-[#6B7280]">
+                    <span>Need custom formatting according to your university rubric?</span>
+                    <Link
+                      to="/contact"
+                      className="font-semibold text-[#3157D5] hover:underline flex items-center gap-1"
+                    >
+                      Discuss with an Editor &rarr;
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/pricing"
+              className="px-3 py-2 text-sm font-semibold text-[#374151] hover:text-[#111827] rounded-lg transition-colors"
+            >
+              Pricing
+            </Link>
+
+            <Link
+              to="/portfolio"
+              className="px-3 py-2 text-sm font-semibold text-[#374151] hover:text-[#111827] rounded-lg transition-colors"
+            >
+              Sample Work
+            </Link>
+
+            <Link
+              to="/resources"
+              className="px-3 py-2 text-sm font-semibold text-[#374151] hover:text-[#111827] rounded-lg transition-colors"
+            >
+              Resources & Guides
+            </Link>
+
+            <Link
+              to="/about"
+              className="px-3 py-2 text-sm font-semibold text-[#374151] hover:text-[#111827] rounded-lg transition-colors"
+            >
+              About
+            </Link>
+
+            <Link
+              to="/faq"
+              className="px-3 py-2 text-sm font-semibold text-[#374151] hover:text-[#111827] rounded-lg transition-colors"
+            >
+              FAQ
+            </Link>
+
+            <Link
+              to="/contact"
+              className="px-3 py-2 text-sm font-semibold text-[#374151] hover:text-[#111827] rounded-lg transition-colors"
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* Right Action Buttons */}
+          <div className="hidden lg:flex items-center gap-2.5">
+            <Button
+              href={siteConfig.telegramUrl}
+              variant="telegram"
+              size="sm"
+              icon={<MessageSquare className="w-3.5 h-3.5" />}
+              analyticsEvent="telegram_click"
+              analyticsData={{ source: 'navbar_desktop' }}
+            >
+              Telegram
+            </Button>
+
+            <Button
+              to="/contact"
+              variant="primary"
+              size="sm"
+              icon={<ArrowRight className="w-3.5 h-3.5" />}
+              iconPosition="right"
+            >
+              Discuss Requirement
+            </Button>
+          </div>
+

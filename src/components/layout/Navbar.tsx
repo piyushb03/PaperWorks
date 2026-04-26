@@ -238,3 +238,73 @@ export const Navbar: React.FC = () => {
             </Button>
           </div>
 
+          {/* Mobile Menu Hamburger */}
+          <div className="flex lg:hidden items-center gap-2">
+            <a
+              href={siteConfig.telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Telegram"
+              className="p-2 rounded-lg bg-[#229ED9] text-white"
+            >
+              <MessageSquare className="w-4 h-4" />
+            </a>
+
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg text-[#111827] hover:bg-black/5 focus:outline-none"
+              aria-label="Toggle Navigation Menu"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Accessible Mobile Menu Drawer */}
+      {isMobileMenuOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation"
+          className="lg:hidden fixed inset-x-0 top-18 bottom-0 bg-[#F7F7F5] z-50 overflow-y-auto px-6 py-6 border-t border-[#E5E7EB] flex flex-col justify-between"
+        >
+          <div className="space-y-6">
+            {/* Services Hubs */}
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-wider text-[#6B7280] mb-2">
+                Services
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <Link
+                  to="/research"
+                  className="p-3 rounded-lg bg-white border border-[#E5E7EB] font-semibold text-xs text-[#111827]"
+                >
+                  Research & Papers &rarr;
+                </Link>
+                <Link
+                  to="/projects"
+                  className="p-3 rounded-lg bg-white border border-[#E5E7EB] font-semibold text-xs text-[#111827]"
+                >
+                  Major & Final Projects &rarr;
+                </Link>
+                <Link
+                  to="/career"
+                  className="p-3 rounded-lg bg-white border border-[#E5E7EB] font-semibold text-xs text-[#111827]"
+                >
+                  Career & ATS Resumes &rarr;
+                </Link>
+                <Link
+                  to="/academic"
+                  className="p-3 rounded-lg bg-white border border-[#E5E7EB] font-semibold text-xs text-[#111827]"
+                >
+                  Academic Documents &rarr;
+                </Link>
+              </div>
+            </div>
+
+            {/* Main Links */}
+            <div className="flex flex-col space-y-3 font-semibold text-base text-[#111827] pt-2 border-t border-[#E5E7EB]">
+              <Link to="/pricing" className="hover:text-[#3157D5] py-1">

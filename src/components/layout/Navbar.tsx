@@ -308,3 +308,53 @@ export const Navbar: React.FC = () => {
             {/* Main Links */}
             <div className="flex flex-col space-y-3 font-semibold text-base text-[#111827] pt-2 border-t border-[#E5E7EB]">
               <Link to="/pricing" className="hover:text-[#3157D5] py-1">
+                Pricing
+              </Link>
+              <Link to="/portfolio" className="hover:text-[#3157D5] py-1">
+                Sample Work Portfolio
+              </Link>
+              <Link to="/resources" className="hover:text-[#3157D5] py-1">
+                Free Student Resources & Guides
+              </Link>
+              <Link to="/about" className="hover:text-[#3157D5] py-1">
+                About PaperWorks
+              </Link>
+              <Link to="/faq" className="hover:text-[#3157D5] py-1">
+                Frequently Asked Questions
+              </Link>
+              <Link to="/contact" className="hover:text-[#3157D5] py-1">
+                Contact & Channels
+              </Link>
+            </div>
+          </div>
+
+          {/* Mobile Bottom Actions */}
+          <div className="pt-6 border-t border-[#E5E7EB] space-y-3 mt-6">
+            <Button
+              href={siteConfig.telegramUrl}
+              variant="telegram"
+              size="lg"
+              className="w-full"
+              icon={<MessageSquare className="w-4 h-4" />}
+            >
+              Message on Telegram
+            </Button>
+
+            <Button
+              to="/contact"
+              variant="primary"
+              size="lg"
+              className="w-full"
+            >
+              Discuss Your Requirement
+            </Button>
+
+            <p className="text-center text-xs text-[#6B7280]">
+              Email: {siteConfig.contactEmail}
+            </p>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};

@@ -68,3 +68,73 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/ieee-formatting" className="hover:text-white transition-colors">
+                  IEEE Formatting Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/major-project" className="hover:text-white transition-colors">
+                  Major Project Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/final-year-project" className="hover:text-white transition-colors">
+                  Final-Year Project Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/project-report" className="hover:text-white transition-colors">
+                  Project Report & Thesis
+                </Link>
+              </li>
+              <li>
+                <Link to="/ats-resume" className="hover:text-white transition-colors">
+                  ATS-Friendly Resumes
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources Column */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#3157D5]">
+              Guides & Resources
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-400 list-none p-0 m-0">
+              <li>
+                <Link to="/resources/how-to-write-research-paper" className="hover:text-white transition-colors">
+                  How to Write a Research Paper
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/ieee-format-guide" className="hover:text-white transition-colors">
+                  IEEE Two-Column Format Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/review-paper-vs-research-paper" className="hover:text-white transition-colors">
+                  Research vs. Review Papers
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/final-year-project-guide" className="hover:text-white transition-colors">
+                  Final-Year Project Guide
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/project-report-format" className="hover:text-white transition-colors">
+                  Project Report Formatting
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/ats-resume-guide" className="hover:text-white transition-colors">
+                  ATS Resume Writing for Freshers
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="hover:text-white transition-colors">
+                  Frequently Asked Questions
+                </Link>
+              </li>
+            </ul>
+          </div>

@@ -138,3 +138,79 @@ export const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+
+          {/* Company & Legal Column */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-[#3157D5]">
+              Company & Legal
+            </h4>
+            <ul className="space-y-2 text-sm text-gray-400 list-none p-0 m-0">
+              <li>
+                <Link to="/about" className="hover:text-white transition-colors">
+                  About PaperWorks
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="hover:text-white transition-colors">
+                  Pricing & Quotes
+                </Link>
+              </li>
+              <li>
+                <Link to="/portfolio" className="hover:text-white transition-colors">
+                  Sample Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition-colors">
+                  Contact Support
+                </Link>
+              </li>
+              <li className="pt-2 border-t border-gray-800">
+                <Link to="/privacy" className="hover:text-white transition-colors text-xs text-gray-400">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="hover:text-white transition-colors text-xs text-gray-400">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link to="/refund-policy" className="hover:text-white transition-colors text-xs text-gray-400">
+                  Refund & Revision Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Academic Integrity Disclaimer Notice */}
+        <div className="pt-8 pb-4 text-xs text-gray-400 leading-relaxed border-b border-gray-800/80">
+          <div className="flex items-start gap-2.5">
+            <ShieldAlert className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+            <div>
+              <span className="font-semibold text-gray-300">Academic Integrity Policy:</span> PaperWorks provides professional technical document support, editing, proofreading, structural formatting, and mentorship. We do not provide exam cheating, student impersonation, ghostwriting of unresearched claims, guaranteed publications, guaranteed university grades, or guaranteed employment. Authors retain full intellectual responsibility for their work.
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+          <div>
+            &copy; {CURRENT_YEAR} {siteConfig.businessName}. All rights reserved.
+          </div>
+          <div className="flex items-center gap-6">
+            <span>Direct Lead Support via Telegram & Email</span>
+            <a
+              href="#root"
+              className="hover:text-white transition-colors flex items-center gap-1"
+            >
+              <span>Back to Top</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};

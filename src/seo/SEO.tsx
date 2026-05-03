@@ -73,3 +73,82 @@ export const SEO: React.FC<SEOProps> = ({
         '@type': 'Organization',
         name: siteConfig.businessName,
         url: siteConfig.siteUrl,
+        logo: `${siteConfig.siteUrl}/favicon.svg`,
+        description: siteConfig.positioning,
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'Customer Support',
+          email: siteConfig.contactEmail,
+          url: siteConfig.telegramUrl,
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: siteConfig.businessName,
+        url: siteConfig.siteUrl,
+        description: siteConfig.tagline,
+      },
+      ...jsonLd,
+    ];
+
+    // Add Breadcrumb schema if breadcrumbs exist
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      schemas.push({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: breadcrumbs.map((crumb, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          name: crumb.label,
+          item: crumb.href ? `${siteConfig.siteUrl}${crumb.href}` : canonicalUrl,
+        })),
+      });
+    }
+
+    // Add Article schema if applicable
+    if (articleSchema) {
+      schemas.push({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: articleSchema.headline,
+        description: articleSchema.description,
+        datePublished: articleSchema.publishedTime,
+        dateModified: articleSchema.modifiedTime || articleSchema.publishedTime,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': canonicalUrl,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: siteConfig.businessName,
+          url: siteConfig.siteUrl,
+        },
+      });
+    }
+
+    // Inject JSON-LD script
+    let scriptTag = document.getElementById('paperworks-schema-jsonld') as HTMLScriptElement | null;
+    if (!scriptTag) {
+      scriptTag = document.createElement('script');
+      scriptTag.id = 'paperworks-schema-jsonld';
+      scriptTag.type = 'application/ld+json';
+      document.head.appendChild(scriptTag);
+    }
+    scriptTag.textContent = JSON.stringify(schemas);
+
+    // Track Google Analytics page_view if configured
+    if (siteConfig.gaMeasurementId && typeof window !== 'undefined') {
+      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      if (typeof w.gtag === 'function') {
+        w.gtag('event', 'page_view', {
+          page_title: fullTitle,
+          page_location: window.location.href,
+          page_path: location.pathname,
+        });
+      }
+    }
+  }, [title, description, canonical, ogType, ogImage, breadcrumbs, articleSchema, jsonLd, location.pathname]);
+
+  return null;
+};

@@ -158,3 +158,93 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ slug }) =>
           </div>
         </div>
       </section>
+
+      {/* ================= SCOPE & WHO IT IS FOR ================= */}
+      <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Who it is for */}
+          <div className="p-7 sm:p-8 bg-white rounded-2xl border border-[#E5E7EB] shadow-xs">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-xl bg-[#3157D5]/10 text-[#3157D5] flex items-center justify-center">
+                <Users className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#111827]">
+                  Who This Service Is For
+                </h3>
+                <p className="text-xs text-[#6B7280]">Tailored for researchers & engineers</p>
+              </div>
+            </div>
+
+            <ul className="space-y-3 list-none p-0 m-0">
+              {service.audience.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-sm text-[#374151]">
+                  <CheckCircle2 className="w-4 h-4 text-[#3157D5] flex-shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* What is included */}
+          <div className="p-7 sm:p-8 bg-white rounded-2xl border border-[#E5E7EB] shadow-xs">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
+                <Layers className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-[#111827]">
+                  What Is Included
+                </h3>
+                <p className="text-xs text-[#6B7280]">Core technical scope & checks</p>
+              </div>
+            </div>
+
+            <ul className="space-y-3 list-none p-0 m-0">
+              {service.scopePoints.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-sm text-[#374151]">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= STEP-BY-STEP PROCESS ================= */}
+      <section className="py-14 sm:py-20 bg-white border-y border-[#E5E7EB] w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#3157D5] bg-[#3157D5]/10 px-2.5 py-1 rounded-md">
+              Working Process
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mt-3">
+              How We Execute This Service
+            </h2>
+            <p className="text-sm text-[#4B5563] mt-2">
+              Structured collaboration from requirement intake to final delivery and review.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {service.processSteps.map((step, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-xl border border-[#E5E7EB] bg-[#F7F7F5] relative flex flex-col justify-between"
+              >
+                <div>
+                  <span className="font-mono text-xs font-bold text-[#3157D5] bg-[#3157D5]/10 px-2 py-0.5 rounded">
+                    0{idx + 1}
+                  </span>
+                  <h3 className="text-base font-bold text-[#111827] mt-3 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>

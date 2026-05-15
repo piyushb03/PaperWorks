@@ -248,3 +248,96 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ slug }) =>
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ================= DELIVERABLES LIST ================= */}
+      <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="p-8 sm:p-10 bg-[#111827] text-white rounded-3xl relative overflow-hidden">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 rounded-xl bg-[#3157D5] text-white flex items-center justify-center">
+              <PackageCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">
+                Final Deliverables
+              </h3>
+              <p className="text-xs text-gray-400">Everything you receive upon completion</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {service.deliverables.map((deliv, idx) => (
+              <div
+                key={idx}
+                className="p-4 rounded-xl bg-gray-800/70 border border-gray-700/80 flex items-start gap-3"
+              >
+                <CheckCircle2 className="w-4 h-4 text-[#3157D5] flex-shrink-0 mt-0.5" />
+                <span className="text-xs sm:text-sm text-gray-200 leading-relaxed">
+                  {deliv}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= SERVICE SPECIFIC FAQS ================= */}
+      <section className="py-14 sm:py-20 bg-white border-y border-[#E5E7EB] w-full">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[#3157D5] bg-[#3157D5]/10 px-2.5 py-1 rounded-md">
+              Answers
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827] mt-3">
+              Frequently Asked Questions: {service.shortTitle}
+            </h2>
+          </div>
+
+          <FAQAccordion items={service.faqs} defaultOpenIndex={0} />
+        </div>
+      </section>
+
+      {/* ================= RELATED SERVICES & GUIDES ================= */}
+      {(relatedServices.length > 0 || relatedResources.length > 0) && (
+        <section className="py-14 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-12">
+          {/* Related Services */}
+          {relatedServices.length > 0 && (
+            <div>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#111827] mb-6">
+                Related Services
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {relatedServices.map((relSvc) => (
+                  <ServiceCard key={relSvc.slug} service={relSvc} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Related Resources */}
+          {relatedResources.length > 0 && (
+            <div className="pt-6 border-t border-[#E5E7EB]">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#111827] mb-6">
+                Helpful Guides & Checklists
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {relatedResources.map((relRes) => (
+                  <ResourceCard key={relRes.slug} resource={relRes} />
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* ================= FINAL CTA ================= */}
+      <section className="py-12 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <CTASection
+          title={`Need professional support for ${service.shortTitle}?`}
+          copy="Send us your requirements or draft materials. We will review scope and outline exact turnaround and delivery details."
+          contextService={service.title}
+        />
+      </section>
+    </div>
+  );
+};

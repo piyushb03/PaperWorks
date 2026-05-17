@@ -88,3 +88,93 @@ export const HomePage: React.FC = () => {
                   size="lg"
                   icon={<MessageSquare className="w-4 h-4" />}
                   analyticsEvent="telegram_click"
+                  analyticsData={{ source: 'hero' }}
+                >
+                  Telegram
+                </Button>
+              </div>
+
+              {/* Integrity & Direct Channel Note */}
+              <div className="pt-4 flex flex-wrap items-center gap-4 text-xs text-[#6B7280]">
+                <div className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[#3157D5]" />
+                  <span>Strict Academic Integrity</span>
+                </div>
+                <span>•</span>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  <span>Direct Communication via Telegram & Email</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Hero Bespoke Document Composition */}
+            <div className="lg:col-span-6 relative">
+              <div className="relative mx-auto max-w-md sm:max-w-lg lg:max-w-none">
+                {/* Primary Card: IEEE Document Preview */}
+                <div className="relative z-20 transform hover:-translate-y-1 transition-transform duration-200">
+                  <IEEDocumentPreview />
+                </div>
+
+                {/* Floating Decorative Badges */}
+                <div className="absolute -bottom-6 -left-4 sm:-left-6 z-30 bg-white p-3.5 rounded-xl border border-[#E5E7EB] shadow-lg flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600">
+                    <FileCheck2 className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-[#111827]">IEEE 830 & Two-Column Ready</div>
+                    <div className="text-[10px] text-[#6B7280]">Margins, equations & references verified</div>
+                  </div>
+                </div>
+
+                <div className="hidden sm:flex absolute -top-5 -right-5 z-30 bg-[#111827] text-white p-3 rounded-xl shadow-lg items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#3157D5] flex items-center justify-center">
+                    <Sparkles className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold">100% Parseable ATS Format</div>
+                    <div className="text-[10px] text-gray-400">Single-column XYZ layout</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= TRUST STRIP ================= */}
+      <TrustStrip />
+
+      {/* ================= SERVICES HUB OVERVIEW ================= */}
+      <section id="services-section" className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <SectionHeading
+          eyebrow="Our Capabilities"
+          title="What can we help you prepare?"
+          description="Explore our four specialized service areas engineered to support researchers, engineering students, and graduating professionals."
+          align="center"
+        />
+
+        {/* 4 Distinct Asymmetric Category Blocks */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card 1: Research & Papers */}
+          <div className="p-6 bg-white rounded-2xl border border-[#E5E7EB] hover:border-[#3157D5]/50 hover:shadow-lg transition-all flex flex-col justify-between group">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-[#3157D5]/10 text-[#3157D5] flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <FileCheck2 className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#3157D5]">
+                Academic Publishing
+              </span>
+              <h3 className="text-xl font-bold text-[#111827] mt-1 mb-2.5">
+                Research & Papers
+              </h3>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed mb-4">
+                Research paper structuring, systematic review surveys, literature synthesis, and IEEE conference formatting.
+              </p>
+              <ul className="space-y-1.5 text-xs text-[#374151] list-none p-0 mb-6">
+                <li className="flex items-center gap-2">• IEEE Two-Column Formatting</li>
+                <li className="flex items-center gap-2">• Review Paper Syntheses</li>
+                <li className="flex items-center gap-2">• Technical Editing & Citations</li>
+              </ul>
+            </div>
+            <Link

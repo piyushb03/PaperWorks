@@ -268,3 +268,93 @@ export const HomePage: React.FC = () => {
               </ul>
             </div>
             <Link
+              to="/academic"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#111827] group-hover:text-[#3157D5] transition-colors"
+            >
+              <span>Explore Academic Documents</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= PROCESS SECTION ================= */}
+      <section className="py-16 sm:py-24 bg-white border-y border-[#E5E7EB] w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Workflow"
+            title="Simple process. Clear communication."
+            description="We prioritize speed, clarity, and requirement-first scoping so you know exactly what to expect from inquiry to final delivery."
+            align="center"
+          />
+
+          <ProcessTimeline />
+
+          <div className="mt-12 text-center">
+            <Button
+              to="/contact"
+              variant="primary"
+              size="md"
+              icon={<ArrowRight className="w-4 h-4" />}
+              iconPosition="right"
+            >
+              Start by Sharing Your Requirement
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= EDITORIAL SECTION: RESEARCH & PAPERS ================= */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <ServiceEditorialBlock
+          eyebrow="Research & Publishing"
+          title="Research deserves more than formatting."
+          tagline="Rigorous structure, reproducible methodologies, and meticulous citation hygiene."
+          description="Reviewers at IEEE, Springer, ACM, and Elsevier evaluate your contribution based on logical clarity, experimental rigor, and formal academic tone. We assist you in organizing research papers, crafting review taxonomies, balancing two-column templates, and ensuring error-free references."
+          points={[
+            'Two-column IEEE format compliance (margins, font hierarchies, column balancing)',
+            'Comprehensive review paper taxonomies and comparative baseline matrices',
+            'Substantive academic editing with tracked changes and commentary',
+            'Verification of [1]–[N] numeric citations and complete DOI records',
+          ]}
+          previewType="research"
+          serviceRoute="/research"
+          serviceTitle="Research Services"
+        />
+      </section>
+
+      {/* ================= EDITORIAL SECTION: MAJOR PROJECTS ================= */}
+      <section className="py-16 sm:py-24 bg-[#F0F0ED] border-y border-[#E5E7EB] w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ServiceEditorialBlock
+            eyebrow="Engineering Capstone"
+            title="Build it. Document it. Present it."
+            tagline="Transform your code repository into an exemplary university project dissertation."
+            description="Whether you are an engineering team building a distributed cloud architecture or an AI prototype, your project evaluation hinges on your thesis report, SRS clarity, and oral viva defense. We assist B.Tech, MCA, and M.Tech candidates through every stage of documentation."
+            points={[
+              'University front matter: Bonafide Certificate, Declaration, Automated TOC',
+              'UML modeling: Use Case, Class, Sequence diagrams, and DFD Levels 0–2',
+              'Unit and integration test matrices with explicit verification logs',
+              'Viva Voce preparation question bank tailored to your tech stack',
+            ]}
+            previewType="project"
+            serviceRoute="/projects"
+            serviceTitle="Project Support"
+            reverse
+          />
+        </div>
+      </section>
+
+      {/* ================= EDITORIAL SECTION: CAREER DOCUMENTS ================= */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <ServiceEditorialBlock
+          eyebrow="Career & Placements"
+          title="Make your first impression count."
+          tagline="Clean, parseable resumes engineered for ATS scanners and technical hiring managers."
+          description="Do not let unparseable multi-column tables or passive task descriptions keep your qualifications hidden. We format technical resumes for fresh engineering graduates using Google’s XYZ accomplishment formula, clear skill categorization, and clean single-column hierarchy."
+          points={[
+            'Single-column structure tested against modern ATS parsers',
+            'Quantifiable accomplishment bullets highlighting metrics and scale',
+            'Categorized skills section (Languages, Frameworks, Cloud, Tools)',
+            'Comprehensive academic CVs formatted for Master’s & PhD admissions',
+          ]}

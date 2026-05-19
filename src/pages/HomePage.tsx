@@ -178,3 +178,93 @@ export const HomePage: React.FC = () => {
               </ul>
             </div>
             <Link
+              to="/research"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#111827] group-hover:text-[#3157D5] transition-colors"
+            >
+              <span>Explore Research Services</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Card 2: Major Projects */}
+          <div className="p-6 bg-white rounded-2xl border border-[#E5E7EB] hover:border-[#3157D5]/50 hover:shadow-lg transition-all flex flex-col justify-between group">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <Code2 className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-purple-600">
+                Engineering Capstones
+              </span>
+              <h3 className="text-xl font-bold text-[#111827] mt-1 mb-2.5">
+                Major & Final-Year Projects
+              </h3>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed mb-4">
+                Complete engineering project support: synopses, SRS documents, architectural UML diagrams, reports, and viva preparation.
+              </p>
+              <ul className="space-y-1.5 text-xs text-[#374151] list-none p-0 mb-6">
+                <li className="flex items-center gap-2">• B.Tech & MCA Project Reports</li>
+                <li className="flex items-center gap-2">• IEEE 830 SRS Specifications</li>
+                <li className="flex items-center gap-2">• Examiner Viva Q&amp;A Coaching</li>
+              </ul>
+            </div>
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#111827] group-hover:text-[#3157D5] transition-colors"
+            >
+              <span>Explore Project Support</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Card 3: Career Documents */}
+          <div className="p-6 bg-white rounded-2xl border border-[#E5E7EB] hover:border-[#3157D5]/50 hover:shadow-lg transition-all flex flex-col justify-between group">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <Briefcase className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
+                Industry Placements
+              </span>
+              <h3 className="text-xl font-bold text-[#111827] mt-1 mb-2.5">
+                Career Documents
+              </h3>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed mb-4">
+                ATS-friendly technical resumes and comprehensive academic CVs tailored for campus placements and graduate admissions.
+              </p>
+              <ul className="space-y-1.5 text-xs text-[#374151] list-none p-0 mb-6">
+                <li className="flex items-center gap-2">• Single-Column ATS Layout</li>
+                <li className="flex items-center gap-2">• Quantifiable XYZ Bullets</li>
+                <li className="flex items-center gap-2">• Master’s &amp; PhD Academic CVs</li>
+              </ul>
+            </div>
+            <Link
+              to="/career"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#111827] group-hover:text-[#3157D5] transition-colors"
+            >
+              <span>Explore Resume Services</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          {/* Card 4: Academic Documents */}
+          <div className="p-6 bg-white rounded-2xl border border-[#E5E7EB] hover:border-[#3157D5]/50 hover:shadow-lg transition-all flex flex-col justify-between group">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <GraduationCap className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-amber-700">
+                Coursework & Defenses
+              </span>
+              <h3 className="text-xl font-bold text-[#111827] mt-1 mb-2.5">
+                Academic Documents
+              </h3>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed mb-4">
+                Technical seminar reports, internship summaries, defense slide decks, and laboratory documentation manuals.
+              </p>
+              <ul className="space-y-1.5 text-xs text-[#374151] list-none p-0 mb-6">
+                <li className="flex items-center gap-2">• Seminar &amp; Internship Reports</li>
+                <li className="flex items-center gap-2">• High-Contrast Defense PPTs</li>
+                <li className="flex items-center gap-2">• University Formatting Ordinances</li>
+              </ul>
+            </div>
+            <Link

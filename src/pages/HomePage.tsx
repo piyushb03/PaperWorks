@@ -358,3 +358,115 @@ export const HomePage: React.FC = () => {
             'Categorized skills section (Languages, Frameworks, Cloud, Tools)',
             'Comprehensive academic CVs formatted for Master’s & PhD admissions',
           ]}
+          previewType="resume"
+          serviceRoute="/career"
+          serviceTitle="Resume Services"
+        />
+      </section>
+
+      {/* ================= WHY PAPERWORKS ================= */}
+      <section className="py-16 sm:py-24 bg-white border-y border-[#E5E7EB] w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Why PaperWorks"
+            title="Genuine value. Direct professional support."
+            description="We built PaperWorks to be the kind of technical document partner we needed during our own engineering and academic journeys."
+            align="center"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 rounded-xl border border-[#E5E7EB] bg-[#F7F7F5] space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-[#111827] text-white flex items-center justify-center font-bold text-sm">
+                01
+              </div>
+              <h4 className="text-base font-bold text-[#111827]">
+                Clear Communication
+              </h4>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                No tickets or convoluted dashboards. You talk directly with technical editors and engineers through Telegram or Email.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl border border-[#E5E7EB] bg-[#F7F7F5] space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-[#3157D5] text-white flex items-center justify-center font-bold text-sm">
+                02
+              </div>
+              <h4 className="text-base font-bold text-[#111827]">
+                Requirement-First Approach
+              </h4>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                We review your university guidelines, target conference track, or job target before quoting. No generic one-size-fits-all packages.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl border border-[#E5E7EB] bg-[#F7F7F5] space-y-3">
+              <div className="w-10 h-10 rounded-lg bg-emerald-700 text-white flex items-center justify-center font-bold text-sm">
+                03
+              </div>
+              <h4 className="text-base font-bold text-[#111827]">
+                Professional Standards
+              </h4>
+              <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+                From IEEE column balancing to university thesis front-matter, every millimeter of your document is crafted to exacting standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= EDUCATIONAL RESOURCES ================= */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+          <SectionHeading
+            eyebrow="Knowledge Base"
+            title="Free resources for students."
+            description="In-depth, practical guides written to help you understand research methodologies, formatting rules, and project milestones."
+            className="mb-0"
+          />
+          <Link
+            to="/resources"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#3157D5] hover:underline"
+          >
+            <span>View All Guides</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {featuredResources.map((res) => (
+            <ResourceCard key={res.slug} resource={res} />
+          ))}
+        </div>
+      </section>
+
+      {/* ================= FAQ SECTION ================= */}
+      <section className="py-16 sm:py-24 bg-white border-y border-[#E5E7EB] w-full">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Got Questions?"
+            title="Frequently Asked Questions"
+            description="Clear, honest answers about our scoping, turnaround times, and academic integrity policies."
+            align="center"
+          />
+
+          <FAQAccordion items={topFaqs} defaultOpenIndex={0} />
+
+          <div className="mt-8 text-center">
+            <Link
+              to="/faq"
+              className="text-xs sm:text-sm font-semibold text-[#3157D5] hover:underline inline-flex items-center gap-1"
+            >
+              <span>View full list of questions & answers</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FINAL CTA ================= */}
+      <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <CTASection />
+      </section>
+    </div>
+  );
+};

@@ -208,3 +208,54 @@ export const PricingPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-14 sm:py-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <SectionHeading
+          eyebrow="Pricing Details"
+          title="Frequently Asked Questions on Quotes"
+          align="center"
+        />
+
+        <div className="space-y-3">
+          <div className="p-5 bg-white rounded-xl border border-[#E5E7EB]">
+            <h4 className="text-sm sm:text-base font-bold text-[#111827] mb-1.5">
+              How quickly will I receive my quote?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+              During working hours ({siteConfig.hours}), quotes are typically provided within 1 to 3 hours after reviewing your materials on Telegram or email.
+            </p>
+          </div>
+
+          <div className="p-5 bg-white rounded-xl border border-[#E5E7EB]">
+            <h4 className="text-sm sm:text-base font-bold text-[#111827] mb-1.5">
+              Can I request revisions after receiving my completed work?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+              Yes. Every project includes a designated review window to request permitted refinements aligning with the originally agreed scope.
+            </p>
+          </div>
+
+          <div className="p-5 bg-white rounded-xl border border-[#E5E7EB]">
+            <h4 className="text-sm sm:text-base font-bold text-[#111827] mb-1.5">
+              What if my deadline is very tight (e.g. 48 hours)?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+              We frequently accommodate expedited timelines when editor bandwidth permits. Please highlight your urgent deadline upfront when reaching out.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <CTASection
+          title="Ready to get a clear, no-obligation quote?"
+          copy="Share your document or project requirements with us on Telegram or Email."
+        />
+      </section>
+    </div>
+  );
+};

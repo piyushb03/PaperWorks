@@ -138,3 +138,73 @@ export const PricingPage: React.FC = () => {
           {categories.map((cat, idx) => (
             <div
               key={idx}
+              className="p-6 bg-white rounded-2xl border border-[#E5E7EB] hover:border-[#3157D5]/40 hover:shadow-md transition-all flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#F7F7F5] flex items-center justify-center mb-4">
+                  {cat.icon}
+                </div>
+                <h3 className="text-lg font-bold text-[#111827] mb-1">
+                  {cat.title}
+                </h3>
+                <p className="text-xs text-[#3157D5] font-medium mb-4">
+                  {cat.tagline}
+                </p>
+
+                <div className="text-[11px] font-bold uppercase tracking-wider text-[#6B7280] mb-2">
+                  Pricing Factors:
+                </div>
+                <ul className="space-y-1.5 text-xs text-[#374151] list-none p-0 m-0 mb-6">
+                  {cat.factors.map((f, fIdx) => (
+                    <li key={fIdx} className="flex items-start gap-1.5">
+                      <span className="text-[#3157D5] font-bold">•</span>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-4 border-t border-[#F3F4F6]">
+                <Button
+                  href={getTelegramLinkWithService(cat.serviceQuery)}
+                  variant="secondary"
+                  size="sm"
+                  className="w-full"
+                  icon={<MessageSquare className="w-3.5 h-3.5" />}
+                >
+                  Get Quote on Telegram
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Honest Commitment & Integrity Notice */}
+      <section className="py-12 bg-white border-y border-[#E5E7EB] w-full">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="p-6 sm:p-8 bg-[#F7F7F5] rounded-2xl border border-[#E5E7EB] space-y-4">
+            <div className="flex items-center gap-3">
+              <ShieldCheck className="w-6 h-6 text-[#3157D5]" />
+              <h3 className="text-lg font-bold text-[#111827]">
+                Our Honest Pricing Commitment
+              </h3>
+            </div>
+            <p className="text-xs sm:text-sm text-[#4B5563] leading-relaxed">
+              We do not display artificial strikethrough discounts, fake countdown timers, or &ldquo;limited-time urgency&rdquo; banners. When you receive a quote from PaperWorks, it is fixed, transparent, and includes agreed review iterations within scope. If your draft requires less work than anticipated, we tell you openly.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-xs text-[#111827] font-semibold">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                <span>Zero Hidden Fees</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#3157D5]" />
+                <span>Permitted Scope Revisions</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-purple-500" />
+                <span>Confidential Handling</span>
+              </div>
+            </div>
+          </div>

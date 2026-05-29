@@ -78,3 +78,101 @@ export const PortfolioPage: React.FC = () => {
       {/* Filter Tabs */}
       <section className="pt-10 pb-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-wrap items-center justify-center gap-2">
+          {[
+            { id: 'all', label: 'All Samples' },
+            { id: 'research', label: 'Research & IEEE' },
+            { id: 'project', label: 'Capstone Projects' },
+            { id: 'career', label: 'Career Resumes' },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setSelectedFilter(tab.id)}
+              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
+                selectedFilter === tab.id
+                  ? 'bg-[#111827] text-white shadow-xs'
+                  : 'bg-white text-[#4B5563] border border-[#E5E7EB] hover:bg-[#F9FAFB]'
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Portfolio Items Showcase */}
+      <section className="py-10 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="space-y-16">
+          {filteredItems.map((item, idx) => (
+            <div
+              key={item.id}
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-6 sm:p-10 bg-white rounded-3xl border border-[#E5E7EB] shadow-xs ${
+                idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Left Column: Sample Description */}
+              <div className={`lg:col-span-6 space-y-4 ${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#3157D5] bg-[#3157D5]/10 px-2 py-0.5 rounded">
+                    {item.category}
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded">
+                    {item.badge}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-bold text-[#111827] leading-snug">
+                  {item.title}
+                </h3>
+
+                <p className="text-sm text-[#4B5563] leading-relaxed">
+                  {item.description}
+                </p>
+
+                <div className="space-y-2 pt-2">
+                  <div className="text-xs font-bold text-[#111827] uppercase tracking-wider">
+                    Demonstrated Standards:
+                  </div>
+                  {item.highlights.map((h, hIdx) => (
+                    <div key={hIdx} className="flex items-start gap-2 text-xs text-[#374151]">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#3157D5] flex-shrink-0 mt-0.5" />
+                      <span>{h}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {item.slugLink && (
+                  <div className="pt-4 flex items-center gap-3">
+                    <Button
+                      to={item.slugLink}
+                      variant="primary"
+                      size="sm"
+                      icon={<ArrowRight className="w-3.5 h-3.5" />}
+                      iconPosition="right"
+                    >
+                      View Service Details
+                    </Button>
+                  </div>
+                )}
+              </div>
+
+              {/* Right Column: Live Interactive Mockup */}
+              <div className={`lg:col-span-6 ${idx % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div className="relative">
+                  {renderSamplePreview(item.sampleType)}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <CTASection
+          title="Need documents crafted to this standard?"
+          copy="Discuss your paper or project report requirements directly with our team."
+        />
+      </section>
+    </div>
+  );
+};

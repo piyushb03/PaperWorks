@@ -148,3 +148,83 @@ export const ResourceArticlePage: React.FC<ResourceArticlePageProps> = ({ slug }
                     {section.checklist.map((item, cIdx) => (
                       <li key={cIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#374151]">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#3157D5] flex-shrink-0 mt-2" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </section>
+          ))}
+        </div>
+
+        {/* Academic Integrity Notice */}
+        <div className="mt-14 p-5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-[#6B7280] flex items-start gap-3">
+          <ShieldCheck className="w-4 h-4 text-[#3157D5] flex-shrink-0 mt-0.5" />
+          <div>
+            <span className="font-semibold text-[#111827]">Academic Integrity Reminder:</span> This resource is provided freely for educational and reference purposes. All manuscripts and university reports must represent original student work and adhere to institutional academic codes.
+          </div>
+        </div>
+
+        {/* Intentional Service Bridge Callout */}
+        {relatedServices.length > 0 && (
+          <div className="mt-12 p-6 sm:p-8 bg-white rounded-2xl border border-[#E5E7EB] shadow-sm">
+            <h3 className="text-lg font-bold text-[#111827] mb-2">
+              Need Professional Assistance With This?
+            </h3>
+            <p className="text-sm text-[#4B5563] mb-6">
+              PaperWorks provides dedicated support for {relatedServices[0].title.toLowerCase()}. Discuss scope or guidelines directly with our editors.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <Button
+                to={relatedServices[0].route}
+                variant="primary"
+                size="md"
+                icon={<ArrowRight className="w-4 h-4" />}
+                iconPosition="right"
+              >
+                View {relatedServices[0].shortTitle}
+              </Button>
+
+              <Button
+                href={getTelegramLinkWithService(relatedServices[0].title)}
+                variant="telegram"
+                size="md"
+                icon={<MessageSquare className="w-4 h-4" />}
+                analyticsEvent="telegram_click"
+                analyticsData={{ source: 'resource_bridge', guide: resource.slug }}
+              >
+                Ask via Telegram
+              </Button>
+            </div>
+          </div>
+        )}
+      </article>
+
+      {/* Related Resources Grid */}
+      {otherResources.length > 0 && (
+        <section className="py-12 bg-white border-t border-[#E5E7EB] w-full">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-xl font-bold text-[#111827] mb-6">
+              Continue Reading
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {otherResources.map((res) => (
+                <ResourceCard key={res.slug} resource={res} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* CTA */}
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <CTASection
+          title="Working on a technical paper or project?"
+          copy="Send us your requirements or questions. We will guide you on the best way forward."
+        />
+      </section>
+    </div>
+  );
+};

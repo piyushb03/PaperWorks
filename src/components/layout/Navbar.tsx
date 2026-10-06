@@ -133,7 +133,7 @@ export const Navbar: React.FC = () => {
               {activeDropdown === 'services' && (
                 <div
                   onMouseLeave={() => setActiveDropdown(null)}
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-1.5 w-[760px] bg-white rounded-2xl border border-[#E5E7EB] shadow-xl p-6 grid grid-cols-2 gap-6 animate-in fade-in zoom-in-95 duration-150"
+                  className="absolute left-0 top-full mt-2 w-[680px] max-w-[calc(100vw-180px)] bg-white rounded-2xl border border-[#E5E7EB] shadow-xl p-6 grid grid-cols-2 gap-6 z-50 animate-in fade-in zoom-in-95 duration-150"
                 >
                   {servicesMenu.map((group, gIdx) => (
                     <div key={gIdx} className="space-y-2">

@@ -241,4 +241,4 @@ npm run build
 
 ## 11. License & Intellectual Property
 
-&copy; 2025 PaperWorks. All rights reserved. Code and documentation prepared for commercial deployment.
+&copy; 2026 PaperWorks. All rights reserved. Code and documentation prepared for commercial deployment.
